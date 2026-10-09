@@ -57,7 +57,7 @@ enum Substitute: RunnableArgumentCommand {
         let inputs = try invocation.values(
             "inputs",
             as: String.self
-        )
+        ) + invocation.passthrough
 
         guard !inputs.isEmpty else {
             throw ArgumentValidationError("No inputs provided.")
