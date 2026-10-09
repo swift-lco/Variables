@@ -7,12 +7,14 @@ enum CaseCon: ArgumentCommand {
 
     static let children: [ArgumentCommandType] = [
         Convert.self,
+        Preserve.self,
+        Substitute.self,
     ]
 
     static func components() throws -> [CommandComponentLowerable] {
         [
             about(
-                "Convert identifiers between casing conventions."
+                "Convert identifiers and perform case-preserving substitutions."
             ),
         ]
     }

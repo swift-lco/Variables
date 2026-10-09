@@ -11,8 +11,8 @@ versions {
     }
 }
 compile {
-    use = false
-    arguments { "--targets" "casecon" }
+    use = true
+    arguments { "--products" "casecon" }
 }
 details = ""
 author = "levi"
